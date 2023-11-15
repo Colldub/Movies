@@ -24,32 +24,24 @@ Tree::~Tree(){
 void Tree::GetData(ifstream& fData){
     string curString;
     string storTitle;
-    int storYear;
+    int storYear = 0;
     string storName;
+    int StrLoc = 0;
     
 
     getline(fData, curString);
     int length = curString.length();
     //cout << "length of curString: " << length << endl;
 
-    for(int i = 0; i < length; i ++){                                   // get title
-        //cout << "current string char: " << curString[i] << endl;        //
-        if(curString[i] == '\('){   ///if year is next                  //
-            i = length + 10;        ///exit loop                        //
-        }else{                                                          // place in storTitle
-            storTitle += curString[i]; //add name                       //
-        }
-    }
-    //cout << "exits first loop" << endl;
+    size_t openingParenthesisPos = curString.find('(');
 
-    size_t i = 0;
-
-    while (i < curString.length() && !isdigit(curString[i])) {
-        i++;
+    for (int i = 0; i < openingParenthesisPos; i++) {
+        storTitle += curString[i];
     }
-    while (i < curString.length() && isdigit(curString[i])) {
-        storYear = storYear * 10 + (curString[i] - '0');
-        i++;
+
+    for (int y = 0; y < 4; y++) {
+        storYear = storYear * 10 + (curString[openingParenthesisPos + 1] - '0');
+        openingParenthesisPos++;
     }
 
     //  NAMES
