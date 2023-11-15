@@ -12,9 +12,6 @@
 using namespace std;
 
 int main(){
-    string title = "rush";
-    int year = 1999;
-    string actor = "Tom Cruize";
 
     Tree tr;
 
