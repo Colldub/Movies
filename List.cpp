@@ -53,3 +53,15 @@ void List::Delete() {
 		delete temp;
 	}
 }
+
+bool List::LookFor(string s){
+    Node* temp = head;
+
+    while(temp != NULL){
+        if(temp->data == s){
+            return true;
+        }
+        temp = temp->next;
+    }
+    return false;
+}

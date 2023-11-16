@@ -19,6 +19,7 @@ public:
     void PrintList();
     void Delete();
     void AddNode(string);
+    bool LookFor(string);
 
 private:
     struct Node {
