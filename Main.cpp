@@ -17,15 +17,18 @@ int main(){
     int exit = 0;
 
     ifstream fData("Movies.txt"); // open file for use
+    int test = 0;
     while(exit == 0){
-        cout << " im trying " << endl;
         exit = tr.GetData(fData);
-        cout << " finished " << endl;
     }
     fData.close();
-
     //other things i want to do
-    tr.printTree();
+    //Display all movies in the tree (only the titles!).
+    tr.DisplayTitles();
+    //Display all actors of a given movie in the tree: Bullitt, Man of the Year, The April Fools and two others of your choice.
+    //Display all movies of a given actor: Tom Cruise, Carrie Fisher, Roger Moore, and two others of your choice.
+    //Display all movies released in 1970 and one other year of your choice.
+    //tr.printTree();
     tr.deleteTree();
     
     

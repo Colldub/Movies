@@ -22,45 +22,50 @@ Tree::~Tree(){
 
 
 int Tree::GetData(ifstream& fData){
+    if (!fData.is_open()) {
+    cerr << "Error: File not found!" << endl;
+    return 1;
+    }
     string curString;
     string storTitle;
     int storYear = 0;
     string storName;
-    int StrLoc = 0;
+    int strLoc = 0;
     
 
     getline(fData, curString);
-    int length = curString.length();
-    //cout << "length of curString: " << length << endl;
 
-    size_t openingParenthesisPos = curString.find('(');
-
-    for (int i = 0; i < openingParenthesisPos; i++) {
-        storTitle += curString[i];
+    while(curString.empty()){ //insures that we are using a string with data in it
+        getline(fData, curString);
     }
 
-    for (int y = 0; y < 4; y++) {
-        storYear = storYear * 10 + (curString[openingParenthesisPos + 1] - '0');
-        openingParenthesisPos++;
+    while(curString[strLoc] != '('){
+        storTitle += curString[strLoc];
+        strLoc ++;
+    }
+
+    strLoc ++;
+
+    while (curString[strLoc] != ')'){
+        storYear = (storYear * 10) + (curString[strLoc] - '0');  // Convert char to int
+        strLoc++;
     }
 
     //  NAMES
     //////////////////////////
     
     List newList;
-
     while(!curString.empty()){
                                     //cout << "adding :" << curString << endl;
-        if(fData.eof()){break;}
+        if(fData.eof()){return 1;}
+
+        newList.AddNode(curString);     
 
         getline(fData, curString);
-
-        newList.AddNode(curString);        
     }
                                     //cout << "this should be empty: " << curString << endl;
     //newList.PrintList();
                                     //cout << "printed" << endl;
-        cout << "next is new stuff" << endl;
     AddNodeR(storTitle, storYear, newList);
     if(fData.eof()){
         return 1;
@@ -71,30 +76,22 @@ int Tree::GetData(ifstream& fData){
 }
 
 void Tree::AddNodeR( string title, int year, List names){
-
     AddNodeR( rootPtr, title, year, names);
 }
 
 // Add Node based on movie title
-void Tree::AddNodeR( Node* &t, string title, int year, List Nlist){
-
-    if( t == NULL ){
-
-        Node* newPtr = new Node;
-
-    // Add new data in the new node’s data field
-        
-        newPtr->title = title;
-        newPtr->names = Nlist;
-        newPtr->year = year;
-        newPtr->leftPtr = NULL;
-        newPtr->rightPtr = NULL;
-        t = newPtr;
-    }
-    else if( title <= t->title ){
-        AddNodeR( t->leftPtr, title, year, Nlist);
-    }else{
-        AddNodeR( t->rightPtr, title, year, Nlist);
+void Tree::AddNodeR(Node* &t, string title, int year, List Nlist) {
+    if (t == nullptr) {
+        t = new Node;
+        t->title = title;
+        t->year = year;
+        t->names = Nlist;
+        t->leftPtr = nullptr;
+        t->rightPtr = nullptr;
+    } else if (title <= t->title) {
+        AddNodeR(t->leftPtr, title, year, Nlist);
+    } else {
+        AddNodeR(t->rightPtr, title, year, Nlist);
     }
 }
 
@@ -135,7 +132,23 @@ void Tree::deleteTree() {
 }
 
 // Return true if node is a leaf
-bool Tree::IsLeaf( Node* treePtr)
-{
+bool Tree::IsLeaf( Node* treePtr) {
     return ((treePtr->leftPtr == NULL) && (treePtr->rightPtr == NULL) );
+}
+
+//public method
+void Tree::DisplayTitles(){
+    DisplayTitles(rootPtr);
+}
+
+void Tree::DisplayTitles(Node* t) {
+    if (t != nullptr) {
+        if (t->leftPtr != nullptr) {
+            DisplayTitles(t->leftPtr);
+        }
+        cout << t->title << endl;
+        if (t->rightPtr != nullptr) {
+            DisplayTitles(t->rightPtr);
+        }
+    }
 }
