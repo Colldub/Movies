@@ -21,7 +21,7 @@ Tree::~Tree(){
 };
 
 
-void Tree::GetData(ifstream& fData){
+int Tree::GetData(ifstream& fData){
     string curString;
     string storTitle;
     int storYear = 0;
@@ -46,21 +46,27 @@ void Tree::GetData(ifstream& fData){
 
     //  NAMES
     //////////////////////////
-    getline(fData, curString);                                          // get names
     
     List newList;
 
     while(!curString.empty()){
                                     //cout << "adding :" << curString << endl;
-        newList.AddNode(curString);
+        if(fData.eof()){break;}
 
         getline(fData, curString);
+
+        newList.AddNode(curString);        
     }
                                     //cout << "this should be empty: " << curString << endl;
     //newList.PrintList();
                                     //cout << "printed" << endl;
+        cout << "next is new stuff" << endl;
     AddNodeR(storTitle, storYear, newList);
-
+    if(fData.eof()){
+        return 1;
+    }else{
+        return 0;
+    }
                                     //cout << "added" << endl;
 }
 

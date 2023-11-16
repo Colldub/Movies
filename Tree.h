@@ -34,7 +34,7 @@ class Tree {
         void printTree();
         void deleteTree();
         void printFullNode(Node*);
-        void GetData(ifstream&);
+        int GetData(ifstream&);
         
     
 

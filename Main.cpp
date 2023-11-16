@@ -14,13 +14,17 @@ using namespace std;
 int main(){
 
     Tree tr;
+    int exit = 0;
 
     ifstream fData("Movies.txt"); // open file for use
-    for(int i = 0; i < 2; i ++){
-        tr.GetData(fData);
+    while(exit == 0){
+        cout << " im trying " << endl;
+        exit = tr.GetData(fData);
+        cout << " finished " << endl;
     }
     fData.close();
 
+    //other things i want to do
     tr.printTree();
     tr.deleteTree();
     
