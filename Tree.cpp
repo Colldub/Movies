@@ -13,14 +13,16 @@ using namespace std;
 
 
 Tree::Tree(){
+    //constructor
     rootPtr = NULL;
 };
 
 Tree::~Tree(){
-
+    //deconstructor
 };
 
-
+//gathers all data from a section seperated by blank lines 
+//  and adds them to a node on the tree
 int Tree::GetData(ifstream& fData){
     if (!fData.is_open()) {
     cerr << "Error: File not found!" << endl;
@@ -35,7 +37,7 @@ int Tree::GetData(ifstream& fData){
 
     getline(fData, curString);
 
-    while(curString.empty()){ //insures that we are using a string with data in it
+    while(curString.empty()){ //insures we are using a string with data in it
         getline(fData, curString);
     }
 
@@ -47,7 +49,7 @@ int Tree::GetData(ifstream& fData){
     strLoc ++;
 
     while (curString[strLoc] != ')'){
-        storYear = (storYear * 10) + (curString[strLoc] - '0');  // Convert char to int
+        storYear = (storYear * 10) + (curString[strLoc] - '0');
         strLoc++;
     }
 
@@ -72,6 +74,7 @@ int Tree::GetData(ifstream& fData){
     }
 }
 
+//public function for AddNodeR
 void Tree::AddNodeR( string title, int year, List names){
     AddNodeR( rootPtr, title, year, names);
 }
@@ -92,10 +95,12 @@ void Tree::AddNodeR(Node* &t, string title, int year, List Nlist) {
     }
 }
 
+//public function for printTree
 void Tree::printTree(){
     printTree(rootPtr);
 }
 
+//prints out all data found in every node in tree
 void Tree::printTree(Node* t){
 
     if(t != NULL){
@@ -105,6 +110,7 @@ void Tree::printTree(Node* t){
     }
 }
 
+//prints out all of the data from a specific node "t"
 void Tree::printFullNode(Node* t){
     cout << endl;
     cout << "Title: " << t->title << endl;
@@ -114,18 +120,20 @@ void Tree::printFullNode(Node* t){
     cout << endl;
 }
 
+//public function for deleteTree
+void Tree::deleteTree() {
+    deleteTree(rootPtr); // Call recursive function starting from the root
+    rootPtr = nullptr;   // Set the root to null after the tree is deleted
+}
+
+//Dealocate all memory from the tree
 void Tree::deleteTree(Node* &t) {
     if (t != nullptr) {
         deleteTree(t->leftPtr);  // Delete left subtree
         deleteTree(t->rightPtr); // Delete right subtree
         delete t;                // Delete current node
-        t = nullptr;             // Set node to null to avoid dangling pointers
+        t = nullptr;       // Set node to null to avoid dangling pointers
     }
-}
-
-void Tree::deleteTree() {
-    deleteTree(rootPtr); // Call the recursive function starting from the root
-    rootPtr = nullptr;   // Set the root to null after the tree is deleted
 }
 
 // Return true if node is a leaf
@@ -133,11 +141,12 @@ bool Tree::IsLeaf( Node* treePtr) {
     return ((treePtr->leftPtr == NULL) && (treePtr->rightPtr == NULL) );
 }
 
-//public method
+//public function for DisplayTitles
 void Tree::DisplayTitles(){
     DisplayTitles(rootPtr);
 }
 
+//Prints out all titles currently in the tree
 void Tree::DisplayTitles(Node* t) {
     if (t != nullptr) {
         if (t->leftPtr != nullptr) {
@@ -150,10 +159,12 @@ void Tree::DisplayTitles(Node* t) {
     }
 }
 
+//public function for DisplayCertinActors
 void Tree::DisplayCertinActors(string s){
     DisplayCertinActors(rootPtr, s);
 }
 
+//prints out all titles that the actor "s" was an actor in
 void Tree::DisplayCertinActors(Node* t, string s){
 
     //while walking through tree
@@ -168,12 +179,12 @@ void Tree::DisplayCertinActors(Node* t, string s){
     } 
 }
 
-//public
+//public function for DisplayAllActors
 void Tree::DisplayAllActors(string s){
     DisplayAllActors(rootPtr, s);
 }
 
-//private
+//prints out all of the actors for a specific title "s"
 void Tree::DisplayAllActors(Node* t, string s){
     if(t != NULL){
         if(t->title == s){
@@ -184,11 +195,12 @@ void Tree::DisplayAllActors(Node* t, string s){
     }
 }
 
-//public
+//public function for DisplayMoviesReleased
 void Tree::DisplayMoviesReleased(int i){
     DisplayMoviesReleased(rootPtr, i);
 }
 
+//prints out all of the movie titles released in "i" year
 void Tree::DisplayMoviesReleased(Node* t, int i){
     if(t != NULL){
         if(t->year == i){

@@ -14,19 +14,20 @@ using namespace std;
 int main(){
 
     Tree tr;
-    int exit = 0;
+    int exit = 0; //used to decied end of file or not
 
     ifstream fData("Movies.txt"); // open file for use
-    int test = 0;
     while(exit == 0){
         exit = tr.GetData(fData);
     }
     fData.close(); // close file
 
+    
     //Display all movies in the tree (only the titles!).
     tr.DisplayTitles();
 
-    //Display all actors of a given movie in the tree: Bullitt, Man of the Year, The April Fools and two others of your choice.
+    //Display all actors of a given movie in the tree: Bullitt, 
+    //  Man of the Year, The April Fools and two others of your choice.
     cout << endl;
     cout << "Actors in Bullitt:" << endl;
     tr.DisplayAllActors("Bullitt ");
@@ -47,7 +48,8 @@ int main(){
     cout << "Actors in Forrest Gump:" << endl;
     tr.DisplayAllActors("Forrest Gump ");
 
-    //Display all movies of a given actor: Tom Cruise, Carrie Fisher, Roger Moore, and two others of your choice.
+    //Display all movies of a given actor: Tom Cruise, Carrie Fisher, 
+    //  Roger Moore, and two others of your choice.
     cout << endl;
     cout << "Tom Cruise's Movies:" << endl;
     tr.DisplayCertinActors("Tom Cruise");

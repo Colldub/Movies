@@ -16,6 +16,7 @@ List::~List() {
     // Deconstructor
 }
 
+//takes a string and adds it to the list
 void List::AddNode(string str) {
 
     Node* ptr = new Node;
@@ -32,10 +33,8 @@ void List::AddNode(string str) {
 // Print list in order to test code 
 void List::PrintList() {
     Node* current = head;
-                                        //cout << "start print" << endl;
                                         
     while (current != nullptr) {
-        //cout << "curr data: " << current->data << endl;
         cout << current->data;
         if (current->next != nullptr) {
             cout << ", ";
@@ -54,6 +53,7 @@ void List::Delete() {
 	}
 }
 
+//returns true if string "s" was found in the list
 bool List::LookFor(string s){
     Node* temp = head;
 
