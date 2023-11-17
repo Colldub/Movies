@@ -4,3 +4,43 @@
 
     Collin Worth 11-7-23
 */
+
+11-9
+
+started on basic tree functions
+    added:
+        bool IsLeaf(Node*);
+        void AddNodeR(string, int, List);
+        void removeNode();
+        void printTree();
+        void deleteTree();
+        void printFullNode(Node*);
+
+11-11
+
+released i want to store my names in a linked list
+    pulled in a priviously built list
+problem (trouble shooting #includes for the 2 .h and 2 .cpp files)
+
+11-15
+
+problem:
+    issues reading in entire fault seg fault i might be blowing the stack
+
+solved:
+    i was not blowing the stack. it was an issue with how i was inserting the year data
+
+    added:
+        int GetData(ifstream&);
+        void DisplayTitles();
+        void DisplayCertinActors(string);
+        void DisplayAllActors(string);
+        void DisplayMoviesReleased(int);
+
+11-16
+problem:
+    the output when i print the tree has what looks like coruptated data thats trying to print
+
+solved:
+    i did not realized that there were some lines in the file that were seperated by more than one blank line
+    added a security that it would only run if line was full of data and if it wasnt it would get next line

@@ -4,3 +4,58 @@
 
     Collin Worth 11-7-23
 */
+
+Two classes
+
+    Tree
+    List - for stroing names of actors
+
+List functions:
+
+    
+    void PrintList();   
+        Print list in order to test code 
+
+    void Delete();
+        Delete function to clean up the list
+
+    void AddNode(string);
+        takes a string input and adds it to the list
+
+    bool LookFor(string);
+        returns true if string "s" was found in the list
+
+Tree Functions:
+
+        bool IsLeaf(Node*);
+            Return true if node that is passed has both leftPtr and rightPtr == NULL
+
+        void printFullNode(Node*);
+            prints out all of the data from a the node thats passed as an argument
+
+        int GetData(ifstream&);
+            gathers all data from a section seperated by blank lines 
+                and adds them to a node on the Tree
+    
+  **(each funciton bellow has a 2nd public function in order to call it from main)
+
+        void AddNodeR(Node* &, string, int, List);
+            Adds a Node to the tree and sorts them based on movie title (alphabeticly)
+
+        void deleteTree(Node* &);
+            Dealocate all memory from the tree
+
+        void printTree(Node*);
+            prints out all data, and lables it, found in every node in tree
+
+        void DisplayTitles(Node*);
+            Prints out all titles currently in the tree in alphabetical order
+
+        void DisplayCertinActors(Node*, string);
+            prints out all movie titles that the actor "string" was an actor in
+
+        void DisplayAllActors(Node*, string);
+            prints out all of the actors for a specific title "string"
+
+        void DisplayMoviesReleased(Node*, int);
+            prints out all of the movie titles released in "int" year
