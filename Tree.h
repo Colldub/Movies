@@ -36,6 +36,7 @@ class Tree {
         void printFullNode(Node*);
         int GetData(ifstream&);
         void DisplayTitles();
+        void DisplayCertinActors(string);
         
     
 
@@ -47,6 +48,7 @@ class Tree {
         void deleteTree(Node* &);
         void printTree(Node*);
         void DisplayTitles(Node*);
+        void DisplayCertinActors(Node*, string);
 
 };
 

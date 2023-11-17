@@ -24,9 +24,29 @@ int main(){
     fData.close();
     //other things i want to do
     //Display all movies in the tree (only the titles!).
-    tr.DisplayTitles();
+    //tr.DisplayTitles();
     //Display all actors of a given movie in the tree: Bullitt, Man of the Year, The April Fools and two others of your choice.
+    
     //Display all movies of a given actor: Tom Cruise, Carrie Fisher, Roger Moore, and two others of your choice.
+    cout << endl;
+    cout << "Tom Cruise's Movies:" << endl;
+    tr.DisplayCertinActors("Tom Cruise");
+
+    cout << endl;
+    cout << "Carrie Fisher's Movies:" << endl;
+    tr.DisplayCertinActors("Carrie Fisher");
+
+    cout << endl;
+    cout << "Roger Moore's Movies:" << endl;
+    tr.DisplayCertinActors("Roger Moore");
+
+    cout << endl;
+    cout << "Clint Eastwood's Movies:" << endl;
+    tr.DisplayCertinActors("Clint Eastwood");
+
+    cout << endl;
+    cout << "Matt Damon's Movies:" << endl;
+    tr.DisplayCertinActors("Matt Damon");
     //Display all movies released in 1970 and one other year of your choice.
     //tr.printTree();
     tr.deleteTree();

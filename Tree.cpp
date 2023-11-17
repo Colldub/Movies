@@ -152,3 +152,21 @@ void Tree::DisplayTitles(Node* t) {
         }
     }
 }
+
+void Tree::DisplayCertinActors(string s){
+    DisplayCertinActors(rootPtr, s);
+}
+
+void Tree::DisplayCertinActors(Node* t, string s){
+
+    //while walking through tree
+    if(t != NULL){
+        //if one of the actors == tom cruize
+        if(t->names.LookFor(s)){
+            //print movie title
+            cout << t->title << endl;
+        }
+        DisplayCertinActors(t->leftPtr, s);
+        DisplayCertinActors(t->rightPtr, s);
+    } 
+}
