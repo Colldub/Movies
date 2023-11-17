@@ -1,0 +1,255 @@
+collin@Roses-iPhone Movies % g++ tree.cpp main.cpp list.cpp
+collin@Roses-iPhone Movies % ./a.out                       
+48 Hrs. 
+A Beautiful Mind 
+A Man Called Horse 
+A Shot in the Dark 
+A View to a Kill 
+A Warm December 
+Alien 
+American Graffiti 
+Apocalypse Now 
+Atomic Brain Invasion 
+Austin Powers: International Man of Mystery 
+Back to School 
+Big 
+Black Rain 
+Blade Runner 
+Blazing Saddles 
+Blue Thunder 
+Bonnie and Clyde 
+Brazil 
+Brazil 
+Breakfast at Tiffany's 
+Breakheart Pass 
+Bright Lights, Big City 
+Bullitt 
+Caddyshack 
+Caddyshack II 
+Casablanca 
+Casino Royale 
+Catch-22 
+Charley Varrick 
+Cinderella Liberty 
+Conan the Barbarian 
+Conan the Destroyer 
+Coneheads 
+Cool Hand Luke 
+Corvette Summer 
+Crank 
+Davy Crockett, King of the Wild Frontier 
+Deathline 
+Deliverance 
+Dirty Harry 
+Dogs of War 
+Down and Out in Beverly Hills 
+Downhill Racer 
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb 
+Duck, You Sucker 
+Easy Rider 
+Eat My Dust! 
+Ensign Pulver 
+Fail-Safe 
+Fangs 
+Fast Times at Ridgemont High 
+Ferris Bueller's Day Off 
+Fools 
+Forrest Gump 
+Freebie and the Bean 
+Gladiator 
+Good Morning, Vietnam 
+Good Will Hunting 
+Goodfellas 
+Gran Torino 
+Greased Lightning 
+Guns of the Magnificent Seven 
+I Love You, Alice B. Toklas! 
+Impostor  
+Invictus 
+Jack Reacher 
+Jaws 
+Kelly's Heroes 
+Leon 
+Lethal Weapon 
+Lethal Weapon 4 
+Little Fauss and Big Halsy 
+Little Man Tate 
+Logan's Run 
+Lonely Are the Brave 
+MASH 
+Magnum Force 
+Man of the Year 
+Marathon Man 
+Marooned 
+Mars Attacks! 
+Minority Report 
+Mission: Impossible - Ghost Protocol 
+Mission: Impossible - Rogue Nation 
+My Blue Heaven 
+Nevada Smith 
+Office Space 
+On Any Sunday 
+On Her Majesty's Secret Service 
+One Flew Over the Cuckoo's Nest 
+Paper Lion 
+Papillon 
+Patriot Games 
+Patton 
+Pork Chop Hill 
+Remo Williams: The Adventure Begins 
+Revenge of the Pink Panther 
+SSSSSSS 
+Sabrina 
+Scavenger Hunt 
+Sgt. Bilko 
+Shadow Man 
+Shattered 
+Short Circuit 
+Sidecar Racers 
+Silent Running 
+Slaughterhouse-Five 
+Sneakers 
+Soylent Green 
+Soylent Green 
+Space Cowboys 
+Spaceballs 
+Spies Like Us 
+St. Ives 
+Stalag 17 
+Star Wars 
+Star Wars: Episode V - The Empire Strikes Back 
+Star Wars: Episode VI - Return of the Jedi 
+Step Into Liquid 
+Summertime Killer 
+Super Fly T.N.T. 
+Tank 
+Terminator 2: Judgment Day 
+Terminator 3: Rise of the Machines 
+The April Fools 
+The Beverly Hillbillies 
+The Bourne Identity 
+The Bourne Supremacy 
+The Boys from Brazil 
+The Bucket List 
+The Cape Town Affair 
+The Day of the Dolphin 
+The Deep 
+The Dirty Dozen 
+The Endless Summer 
+The Fifth Element 
+The Flim-Flam Man 
+The Forger 
+The Geisha Boy 
+The Graduate 
+The Great Escape 
+The Great Race 
+The Hunt for Red October 
+The Internship 
+The Italian Job 
+The Keeper 
+The Last Remake of Beau Geste 
+The Last Starfighter 
+The Last Starfighter 
+The Lawnmower Man 
+The Maltese Falcon 
+The Man with One Red Shoe 
+The Mechanic 
+The Nutty Professor 
+The Odessa File 
+The Omega Man 
+The Right Stuff 
+The Running Man 
+The Sea Wolves 
+The Sting 
+The Terminator 
+The Thief Who Came to Dinner 
+The Transporter 
+The Ugly Dachshund  
+The Wedding Singer 
+The Wild Bunch 
+Them! 
+Thunderball 
+Time Runner 
+Timerider: The Adventure of Lyle Swann 
+Top Gun 
+Topaz 
+Tough Guys 
+Toys 
+Transporter 2 
+Transporter 3 
+Tremors 
+Tron 
+Unforgiven 
+Vanishing Point 
+Voyage to the Bottom of the Sea 
+Wall Street 
+War Games 
+War and Peace 
+Wayne's World 
+Wayne's World 
+Wayne's World 2 
+Weird Science 
+Who Framed Roger Rabbit 
+Willard 
+Willy Wonka & the Chocolate Factory 
+Zero Tolerance 
+
+Actors in Bullitt:
+Robert Duvall, Don Gordon, Robert Vaughn, Jacqueline Bisset, Steve McQueen, Bullitt (1968)
+
+Actors in Man of the Year:
+Catherine Crier, James Carville, Chris Matthews, Doug Murray, Amy Poehler, Tina Fey, Faith Daniels, David Alpay, Jeff Goldblum, Lewis Black, Laura Linney, Christopher Walken, Robin Williams, Man of the Year (2006)
+
+Actors in The April Fools:
+David Doyle, Dee Gardner, Janice Carroll, Gary Dubin, Sally Kellerman, Harvey Korman, Melinda Dillon, Kenneth Mars, Charles Boyer, Myrna Loy, Jack Weston, Peter Lawford, Catherine Deneuve, Jack Lemmon, The April Fools (1969)
+
+Actors in Good Will Hunting:
+Cole Hauser, Casey Affleck, Minnie Driver, Stellan Skarsgard, Ben Affleck, Robin Williams, Matt Damon, Good Will Hunting (1997)
+
+Actors in Forrest Gump:
+Michael Conner Humphreys, Rebecca Williams, Sally Field, Mykelti Williamson, Gary Sinise, Robin Wright, Tom Hanks, Forrest Gump (1994)
+
+Tom Cruise's Movies:
+Jack Reacher 
+Mission: Impossible - Rogue Nation 
+Minority Report 
+Mission: Impossible - Ghost Protocol 
+Top Gun 
+
+Carrie Fisher's Movies:
+Star Wars 
+Star Wars: Episode V - The Empire Strikes Back 
+Star Wars: Episode VI - Return of the Jedi 
+The Man with One Red Shoe 
+
+Roger Moore's Movies:
+A View to a Kill 
+The Sea Wolves 
+
+Clint Eastwood's Movies:
+Dirty Harry 
+Gran Torino 
+Kelly's Heroes 
+Magnum Force 
+Space Cowboys 
+Unforgiven 
+
+Matt Damon's Movies:
+Good Will Hunting 
+Invictus 
+The Bourne Identity 
+The Bourne Supremacy 
+
+Movies Released in 1970:
+A Man Called Horse 
+Catch-22 
+Fools 
+Kelly's Heroes 
+Little Fauss and Big Halsy 
+MASH 
+Patton 
+
+Movies Released in 2000:
+Gladiator 
+Space Cowboys 
+collin@Roses-iPhone Movies % 
