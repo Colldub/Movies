@@ -26,7 +26,26 @@ int main(){
     //Display all movies in the tree (only the titles!).
     //tr.DisplayTitles();
     //Display all actors of a given movie in the tree: Bullitt, Man of the Year, The April Fools and two others of your choice.
-    
+    cout << endl;
+    cout << "Actors in Bullitt:" << endl;
+    tr.DisplayAllActors("Bullitt ");
+
+    cout << endl;
+    cout << "Actors in Man of the Year:" << endl;
+    tr.DisplayAllActors("Man of the Year ");
+
+    cout << endl;
+    cout << "Actors in The April Fools:" << endl;
+    tr.DisplayAllActors("The April Fools ");
+
+    cout << endl;
+    cout << "Actors in Good Will Hunting:" << endl;
+    tr.DisplayAllActors("Good Will Hunting ");
+
+    cout << endl;
+    cout << "Actors in Forrest Gump:" << endl;
+    tr.DisplayAllActors("Forrest Gump ");
+
     //Display all movies of a given actor: Tom Cruise, Carrie Fisher, Roger Moore, and two others of your choice.
     cout << endl;
     cout << "Tom Cruise's Movies:" << endl;

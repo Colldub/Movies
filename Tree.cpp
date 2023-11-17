@@ -170,3 +170,20 @@ void Tree::DisplayCertinActors(Node* t, string s){
         DisplayCertinActors(t->rightPtr, s);
     } 
 }
+
+//public
+void Tree::DisplayAllActors(string s){
+    DisplayAllActors(rootPtr, s);
+}
+
+//private
+void Tree::DisplayAllActors(Node* t, string s){
+    if(t != NULL){
+        //cout << t->title << " and " << s << endl;
+        if(t->title == s){
+            t->names.PrintList();
+        }
+        DisplayAllActors(t->leftPtr, s);
+        DisplayAllActors(t->rightPtr, s);
+    }
+}
