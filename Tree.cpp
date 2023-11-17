@@ -56,23 +56,20 @@ int Tree::GetData(ifstream& fData){
     
     List newList;
     while(!curString.empty()){
-                                    //cout << "adding :" << curString << endl;
+    
         if(fData.eof()){return 1;}
 
         newList.AddNode(curString);     
 
         getline(fData, curString);
     }
-                                    //cout << "this should be empty: " << curString << endl;
-    //newList.PrintList();
-                                    //cout << "printed" << endl;
+ 
     AddNodeR(storTitle, storYear, newList);
     if(fData.eof()){
         return 1;
     }else{
         return 0;
     }
-                                    //cout << "added" << endl;
 }
 
 void Tree::AddNodeR( string title, int year, List names){
@@ -161,7 +158,7 @@ void Tree::DisplayCertinActors(Node* t, string s){
 
     //while walking through tree
     if(t != NULL){
-        //if one of the actors == tom cruize
+        //if one of the actors == string
         if(t->names.LookFor(s)){
             //print movie title
             cout << t->title << endl;
@@ -179,11 +176,25 @@ void Tree::DisplayAllActors(string s){
 //private
 void Tree::DisplayAllActors(Node* t, string s){
     if(t != NULL){
-        //cout << t->title << " and " << s << endl;
         if(t->title == s){
             t->names.PrintList();
         }
         DisplayAllActors(t->leftPtr, s);
         DisplayAllActors(t->rightPtr, s);
+    }
+}
+
+//public
+void Tree::DisplayMoviesReleased(int i){
+    DisplayMoviesReleased(rootPtr, i);
+}
+
+void Tree::DisplayMoviesReleased(Node* t, int i){
+    if(t != NULL){
+        if(t->year == i){
+            cout << t->title << endl;
+        }
+        DisplayMoviesReleased(t->leftPtr, i);
+        DisplayMoviesReleased(t->rightPtr, i);
     }
 }

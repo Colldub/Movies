@@ -21,10 +21,11 @@ int main(){
     while(exit == 0){
         exit = tr.GetData(fData);
     }
-    fData.close();
-    //other things i want to do
+    fData.close(); // close file
+
     //Display all movies in the tree (only the titles!).
-    //tr.DisplayTitles();
+    tr.DisplayTitles();
+
     //Display all actors of a given movie in the tree: Bullitt, Man of the Year, The April Fools and two others of your choice.
     cout << endl;
     cout << "Actors in Bullitt:" << endl;
@@ -66,8 +67,16 @@ int main(){
     cout << endl;
     cout << "Matt Damon's Movies:" << endl;
     tr.DisplayCertinActors("Matt Damon");
+
     //Display all movies released in 1970 and one other year of your choice.
-    //tr.printTree();
+    cout << endl;
+    cout << "Movies Released in 1970:" << endl;
+    tr.DisplayMoviesReleased(1970);
+
+    cout << endl;
+    cout << "Movies Released in 2000:" << endl;
+    tr.DisplayMoviesReleased(2000);
+
     tr.deleteTree();
     
     

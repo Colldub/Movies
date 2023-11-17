@@ -38,6 +38,7 @@ class Tree {
         void DisplayTitles();
         void DisplayCertinActors(string);
         void DisplayAllActors(string);
+        void DisplayMoviesReleased(int);
         
     
 
@@ -51,6 +52,7 @@ class Tree {
         void DisplayTitles(Node*);
         void DisplayCertinActors(Node*, string);
         void DisplayAllActors(Node*, string);
+        void DisplayMoviesReleased(Node*, int);
 
 };
 

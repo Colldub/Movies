@@ -1,5 +1,5 @@
 /*
-	Palandrome Assignment	CS 121
+	CS 121
 	Class File
 	
 	Collin Worth	9-25-2023
